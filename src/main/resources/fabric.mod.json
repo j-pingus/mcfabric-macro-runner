@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "macro-runner",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Macro runner",
+  "description": "Runs commands to the server on a certain interval of time",
   "authors": [
-    "Me!"
+    "jPingus"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/j-pingus/command-runner"
   },
 
   "license": "CC0-1.0",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "lu.jpingus.fabricmc.macrorunner.MacroRunnerMod"
     ]
   },
   "mixins": [
@@ -27,8 +27,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.9",
-    "fabric-api": "*",
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "malilib": "*",
     "minecraft": "~1.19",
     "java": ">=17"
   },
