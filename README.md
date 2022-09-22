@@ -6,4 +6,4 @@ For setup instructions please see the [fabric wiki page](https://fabricmc.net/wi
 
 ## Usage
 
-Install in mods folder of your minecraft fabric loaded version in world press <R> + <C> to configure  
+Install in mods folder of your minecraft fabric loaded version in world press R + C to configure  
