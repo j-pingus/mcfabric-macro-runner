@@ -22,7 +22,6 @@ public class InitHandler implements IInitializationHandler {
             {
                 return false;
             }
-            //mc.getServer().getCommandManager().execute(mc.player.getCommandSource(),"help");
             if (key == Configs.Generic.OPEN_CONFIG_GUI.getKeybind())
             {
                 GuiBase.openGui(new GuiConfigs());
@@ -31,8 +30,12 @@ public class InitHandler implements IInitializationHandler {
         });
         KeyCallbackToggleBoolean.register(
                 Configs.Generic.TOGGLE_SEND,
-                ()-> MacroRunnerMod.LOGGER.info("Toggle send on"),
-                ()-> MacroRunnerMod.LOGGER.info("Toggle send off")
+                ()-> MacroRunner.getInstance().run(new Macro(
+                        Configs.Generic.SERVER_COMMAND,
+                        Configs.Generic.SEND_COOLDOWN,
+                        Configs.Generic.LOOP_SEND,
+                        Configs.Generic.TOGGLE_SEND
+                ))
         );
     }
 }
