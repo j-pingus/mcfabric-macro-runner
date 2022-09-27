@@ -23,13 +23,14 @@ public class MacroRunnerMod implements ModInitializer {
 
         LOGGER.info("Initializing {}", Reference.MOD_NAME);
         InitializationHandler.getInstance().registerInitializationHandler(new InitHandler());
-        ConnectionHandler connectionHandler = new ConnectionHandler();
-        ClientPlayConnectionEvents.JOIN.register(connectionHandler);
-        ClientPlayConnectionEvents.DISCONNECT.register(connectionHandler);
     }
 
     public static void printPlayerWarningMessage(String message) {
         String toPrint = GuiBase.TXT_DARK_RED + StringUtils.translate(message) + GuiBase.TXT_RST;
+        InfoUtils.printActionbarMessage(toPrint);
+    }
+    public static void printPlayerMessage(String message) {
+        String toPrint = GuiBase.TXT_BLUE + StringUtils.translate(message) + GuiBase.TXT_RST;
         InfoUtils.printActionbarMessage(toPrint);
     }
 }
