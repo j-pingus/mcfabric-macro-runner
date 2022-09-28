@@ -22,7 +22,7 @@ public class MacroConfigGroup implements ConfigGroupInterface {
 
     protected MacroConfigGroup(int number) {
         this.number = number;
-        toggleSend = new ConfigBooleanHotkeyed("toggleSend", false, "R," + number, KeybindSettings.RELEASE_EXCLUSIVE, "A hotkey to start/stop the command sending", "Sending command");
+        toggleSend = new ConfigBooleanHotkeyed("toggleSend", false, "KP_" + number, KeybindSettings.RELEASE_EXCLUSIVE, "A hotkey to start/stop the command sending", "Sending command");
         serverCommand = new ConfigString("serverCommand", "help", "The command to be sent to the server (without '/' to start)");
         loopSend = new ConfigBoolean("loopSend", false, "Send again after cooldown", "Loop sending command");
         sendCooldown = new ConfigInteger("sendCooldown", 5, 1, 60, "How many seconds to wait before sending again");
