@@ -28,7 +28,7 @@ public class MacroRunner {
                 MinecraftClient mc = MinecraftClient.getInstance();
 
                 if (mc == null) {
-                    MacroRunnerMod.LOGGER.warn("No good conditions to run macro mc:{} ", mc);
+                    MacroRunnerMod.LOGGER.warn("No MinecraftClient");
                     return;
                 }
                 if (mc.player == null) {

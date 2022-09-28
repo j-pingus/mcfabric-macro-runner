@@ -1,10 +1,8 @@
 package lu.jpingus.fabricmc.macrorunner;
 
-import com.mojang.brigadier.ParseResults;
 import fi.dy.masa.malilib.config.options.ConfigBoolean;
 import fi.dy.masa.malilib.config.options.ConfigInteger;
 import fi.dy.masa.malilib.config.options.ConfigString;
-import net.minecraft.command.CommandSource;
 
 public class Macro {
     private final String command;
@@ -17,7 +15,7 @@ public class Macro {
         this.command = command.getStringValue();
         this.delay = delay.getIntegerValue();
         this.repeat = repeat.getBooleanValue();
-        this.active=active;
+        this.active = active;
     }
 
     public String getCommand() {
@@ -31,6 +29,7 @@ public class Macro {
     public boolean isRepeat() {
         return repeat;
     }
+
     public boolean isActive() {
         return active.getBooleanValue();
     }
