@@ -12,11 +12,20 @@ import java.io.File;
 
 public class Configs implements IConfigHandler {
     public static final Generic GENERIC = new Generic();
-    public static final MacroConfigGroup MACRO_1 = new MacroConfigGroup(1);
-    public static final MacroConfigGroup MACRO_2 = new MacroConfigGroup(2);
-    public static final MacroConfigGroup MACRO_3 = new MacroConfigGroup(3);
-    public static final MacroConfigGroup[] MACROS = {MACRO_1, MACRO_2, MACRO_3};
-    public static final ConfigGroupInterface[] GROUPS = {GENERIC, MACRO_1, MACRO_2, MACRO_3};
+    private static final MacroConfigGroup MACRO_1 = new MacroConfigGroup(1);
+    private static final MacroConfigGroup MACRO_2 = new MacroConfigGroup(2);
+    private static final MacroConfigGroup MACRO_3 = new MacroConfigGroup(3);
+    private static final MacroConfigGroup MACRO_4 = new MacroConfigGroup(4);
+    private static final MacroConfigGroup MACRO_5 = new MacroConfigGroup(5);
+    private static final MacroConfigGroup MACRO_6 = new MacroConfigGroup(6);
+    private static final MacroConfigGroup MACRO_7 = new MacroConfigGroup(7);
+    private static final MacroConfigGroup MACRO_8 = new MacroConfigGroup(8);
+    private static final MacroConfigGroup MACRO_9 = new MacroConfigGroup(9);
+    public static final MacroConfigGroup[] MACROS = {
+            MACRO_1, MACRO_2, MACRO_3, MACRO_4, MACRO_5, MACRO_6, MACRO_7, MACRO_8, MACRO_9};
+    public static final ConfigGroupInterface[] GROUPS = {
+            GENERIC,
+            MACRO_1, MACRO_2, MACRO_3, MACRO_4, MACRO_5, MACRO_6, MACRO_7, MACRO_8, MACRO_9};
     private static final String CONFIG_FILE_NAME = Reference.MOD_ID + ".json";
     private static final int CONFIG_VERSION = 1;
 

@@ -32,7 +32,7 @@ public class MacroConfigGroup implements ConfigGroupInterface {
 
     @Override
     public String getName() {
-        return null;
+        return "Macro"+number;
     }
 
     public void resetConfigBeforeSave() {
