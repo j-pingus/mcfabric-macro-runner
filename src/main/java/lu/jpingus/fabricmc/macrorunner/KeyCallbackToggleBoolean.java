@@ -12,13 +12,16 @@ import javax.annotation.Nullable;
 public class KeyCallbackToggleBoolean extends KeyCallbackToggleBooleanConfigWithMessage {
     final Runnable actionOn;
     final Runnable actionOff;
-    public static void register(ConfigBooleanHotkeyed config, @Nullable Runnable actionOn){
-        KeyCallbackToggleBoolean.register(config,actionOn,null);
+
+    public static void register(ConfigBooleanHotkeyed config, @Nullable Runnable actionOn) {
+        KeyCallbackToggleBoolean.register(config, actionOn, null);
     }
-    public static void register(ConfigBooleanHotkeyed config, @Nullable Runnable actionOn, @Nullable Runnable actionOff){
-        KeyCallbackToggleBoolean callback = new KeyCallbackToggleBoolean(config,actionOn,actionOff);
+
+    public static void register(ConfigBooleanHotkeyed config, @Nullable Runnable actionOn, @Nullable Runnable actionOff) {
+        KeyCallbackToggleBoolean callback = new KeyCallbackToggleBoolean(config, actionOn, actionOff);
         config.getKeybind().setCallback(callback);
     }
+
     private KeyCallbackToggleBoolean(IConfigBoolean config, @Nullable Runnable actionOn, @Nullable Runnable actionOff) {
         super(config);
         this.actionOff = actionOff;
@@ -27,7 +30,7 @@ public class KeyCallbackToggleBoolean extends KeyCallbackToggleBooleanConfigWith
 
     @Override
     public boolean onKeyAction(KeyAction action, IKeybind key) {
-        MacroRunnerMod.LOGGER.info("Key action triggered for {}",this.config.getPrettyName());
+        MacroRunnerMod.LOGGER.info("Key action triggered for {}", this.config.getPrettyName());
         MinecraftClient mc = MinecraftClient.getInstance();
         if (mc != null && mc.player != null && super.onKeyAction(action, key)) {
             if (!this.config.getBooleanValue()) {

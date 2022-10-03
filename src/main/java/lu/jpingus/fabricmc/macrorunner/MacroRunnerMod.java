@@ -5,7 +5,6 @@ import fi.dy.masa.malilib.gui.GuiBase;
 import fi.dy.masa.malilib.util.InfoUtils;
 import fi.dy.masa.malilib.util.StringUtils;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +28,7 @@ public class MacroRunnerMod implements ModInitializer {
         String toPrint = GuiBase.TXT_DARK_RED + StringUtils.translate(message) + GuiBase.TXT_RST;
         InfoUtils.printActionbarMessage(toPrint);
     }
+
     public static void printPlayerMessage(String message) {
         String toPrint = GuiBase.TXT_BLUE + StringUtils.translate(message) + GuiBase.TXT_RST;
         InfoUtils.printActionbarMessage(toPrint);
