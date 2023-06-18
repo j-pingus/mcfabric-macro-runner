@@ -5,6 +5,7 @@ import fi.dy.masa.malilib.gui.GuiBase;
 import fi.dy.masa.malilib.util.InfoUtils;
 import fi.dy.masa.malilib.util.StringUtils;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.MinecraftClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class MacroRunnerMod implements ModInitializer {
 
         LOGGER.info("Initializing {}", Reference.MOD_NAME);
         InitializationHandler.getInstance().registerInitializationHandler(new InitHandler());
+        MinecraftClient.getInstance();
     }
 
     public static void printPlayerWarningMessage(String message) {

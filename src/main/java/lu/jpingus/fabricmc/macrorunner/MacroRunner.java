@@ -37,7 +37,7 @@ public class MacroRunner {
                 }
 
                 MacroRunnerMod.LOGGER.debug("before command {}", macro);
-                mc.player.sendCommand(macro.getCommand());
+                mc.player.networkHandler.sendChatCommand(macro.getCommand());
                 MacroRunnerMod.LOGGER.debug("after command {}", macro);
                 if (macro.isRepeat() && macro.isActive()) {
                     Thread.sleep(macro.getDelay() * 1000L);
